@@ -340,4 +340,46 @@ button:hover, .btn:hover, a.btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(255, 77, 77, 0.5);
 }
+/* === Fix for black screen loading === */
+html, body {
+  height: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+section {
+  min-height: auto;
+}
+
+body {
+  background: #000; /* keep your dark theme */
+  color: #fff;
+}
+/* === Fix Black Screen Fallback === */
+.section:first-of-type {
+  opacity: 1;
+  transform: none;
+}
+
+/* === Resume Button Spacing Fix === */
+.resume-btn {
+  display: inline-block;
+  margin: 18px 0 28px;
+}
+
+/* === Intro Text Spacing === */
+.intro p {
+  margin-top: 10px;
+  line-height: 1.7;
+}
+
+/* === Smooth Page Fade-In === */
+body {
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+
+body.loaded {
+  opacity: 1;
+}
 

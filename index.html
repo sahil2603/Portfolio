@@ -4,39 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sahil Kumar | Portfolio</title>
-  <link rel="stylesheet" href="style_v2.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+
+  <!-- === Header / Navbar === -->
   <header>
-    <nav class="navbar">
-      <h1 class="logo">Sahil <span>Kumar</span></h1>
+    <div class="navbar">
+      <div class="logo">Sahil <span>Kumar</span></div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
+    </div>
   </header>
 
+  <!-- === Home Section === -->
   <section id="home" class="section home-bg">
-  <div class="glow-bg"></div>
-  <div class="intro">
-    <img src="sahil.jpg" alt="Sahil Kumar" class="profile-img" />
-    <h2>Hey, I’m <span class="highlight">Sahil Kumar</span> 👋</h2>
-    <p class="typing-text"></p>
-    <a href="resume.pdf" download class="resume-btn">Download Resume</a>
-    <p>
-      From <strong>Jharkhand</strong>, living in <strong>New Delhi</strong>.<br />
-      I’m a passionate developer exploring <span class="highlight">Python, AI, and Machine Learning</span>.
-    </p>
-  </div>
-</section>
+    <div class="glow-bg"></div>
+    <div class="intro">
+      <img src="images/profile.jpg" alt="Sahil Kumar" class="profile-img" />
+      <h1>Hey, I’m <span class="highlight">Sahil Kumar</span> 👋</h1>
+      <a href="resume.pdf" class="resume-btn" download>Download Resume</a>
+      <p>From <b>Jharkhand</b>, living in <b>New Delhi</b>.</p>
+      <p>I’m a passionate developer exploring <span class="highlight">Python</span>, <span class="highlight">AI</span>, and <span class="highlight">Machine Learning</span>.</p>
+    </div>
+  </section>
 
-
+  <!-- === Skills Section === -->
   <section id="skills" class="section">
-    <h2 class="section-title">Skills ⚡</h2>
+    <h2>Skills ⚡</h2>
     <ul class="skills-list">
       <li>Python</li>
       <li>NumPy</li>
@@ -46,53 +46,78 @@
     </ul>
   </section>
 
+  <!-- === Projects Section === -->
   <section id="projects" class="section">
-    <h2 class="section-title">Projects 💼</h2>
-
+    <h2>Projects 🚀</h2>
     <div class="project">
-      <h3>IoT-based Smart Segregating Dustbin</h3>
-      <p>
-        Smart IoT project that automatically classifies waste into dry and wet categories using sensors.
-      </p>
+      <h3>AI Chatbot</h3>
+      <p>Developed a simple chatbot using Flask and OpenAI API.</p>
     </div>
-
     <div class="project">
-      <h3>Bank Management System (Python)</h3>
-      <p>
-        Python-based system to manage accounts, deposits, and withdrawals efficiently.
-      </p>
+      <h3>Portfolio Website</h3>
+      <p>This site you're viewing — designed with HTML, CSS, and a bit of magic ✨.</p>
     </div>
   </section>
-<!-- === Certifications Section === -->
-<section id="certifications" class="certifications">
-  <h2 class="section-title">Certifications</h2>
-  <div class="cert-container">
-    <a href="https://coursera.org/verify/QYNODXB333E9" target="_blank" class="cert-card">
-      <h3>AWS Cloud Practitioner</h3>
-      <p>Authorized by KodeKloud via Coursera</p>
-    </a>
 
-    <a href="Privacy and Security in Online Social Media (2).pdf" target="_blank" class="cert-card">
-      <h3>NPTEL: Privacy and Security in Online Social Media</h3>
-      <p>Issued by IIT Madras, Jan–Apr 2025</p>
-    </a>
-  </div>
-</section>
+  <!-- === Certifications Section === -->
+  <section id="certifications" class="section certifications">
+    <h2 class="section-title">Certifications</h2>
+    <div class="cert-container">
+      <a href="https://coursera.org/verify/QYNODXB333E9" target="_blank" class="cert-card">
+        <h3>AWS Cloud Practitioner</h3>
+        <p>Authorized by KodeKloud via Coursera</p>
+      </a>
 
+      <a href="Privacy and Security in Online Social Media (2).pdf" target="_blank" class="cert-card">
+        <h3>NPTEL: Privacy and Security in Online Social Media</h3>
+        <p>Issued by IIT Madras, Jan–Apr 2025</p>
+      </a>
+    </div>
+  </section>
 
+  <!-- === Contact Section === -->
   <section id="contact" class="section">
-    <h2 class="section-title">Contact ☎️</h2>
-    <p>Email: <a href="mailto:sahil.sah2603@gmail.com">sahil.sah2603@gmail.com</a></p>
+    <h2>Contact 📬</h2>
+    <p>Let’s connect — I’m always open to new opportunities and collaborations!</p>
     <div class="socials">
-      <a href="https://www.linkedin.com/in/sahil-kumar-14927b375" target="_blank">LinkedIn</a>
+      <a href="mailto:sahil.s2603@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/sahil2603" target="_blank">LinkedIn</a>
       <a href="https://github.com/sahil2603" target="_blank">GitHub</a>
     </div>
   </section>
 
+  <!-- === Footer === -->
   <footer>
-    <p>© 2025 Sahil Kumar | Designed with ❤️ in Dark Mode</p>
+    <p>© 2025 Sahil Kumar. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- === JS for Smooth Visibility + Fade In === -->
+  <script>
+    // Fade-in for entire body
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+
+    // Reveal sections smoothly on scroll
+    (function () {
+      const sections = document.querySelectorAll('.section');
+
+      // Show the first section immediately
+      if (sections[0]) sections[0].classList.add('visible');
+
+      // Reveal others on scroll
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      sections.forEach((s, i) => { if (i > 0) io.observe(s); });
+    })();
+  </script>
+
 </body>
 </html>
